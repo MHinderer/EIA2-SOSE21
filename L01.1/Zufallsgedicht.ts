@@ -1,50 +1,30 @@
 namespace Zufallsgedicht {
-    interface Gedicht {
-        word1: string;
-        word2: string;
-        word3: string;
-        word4: string;
-        word5: string;
+
+    let subject: string[] = ["Moritz", "Julian", "Mona", "Martin", "Leon"];
+
+    let preadikat: string[] = ["trinkt", "pöbelt", "codet", "randaliert", "ärgert"];
+
+    let object: string[] = ["Alkohol", "in der Öffentlichkeit", "Leute an", "am Computer", "im Schlachthof"];
+
+    for (let index: number = 5; index >= 1; index--) {
+        //console.log(index);
+        //getVerse(subjekt, preadikat, objekt);
+        //console.log(getVerse);
+        let valueFinal: string = getVerse(subject, preadikat, object);
+        console.log(valueFinal);
     }
 
-    let subjekt: Gedicht[] = [
-        {
-            word1: "Moritz",
-            word2: "Julian",
-            word3: "Mona",
-            word4: "Leon",
-            word5: "Martin"
-        }
-    ];
+    function getVerse(_subject: string[], _preadikat: string[], _object: string[]): string {
+        let value1: number = Math.floor(Math.random() * _subject.length);
+        let value2: number = Math.floor(Math.random() * _preadikat.length);
+        let value3: number = Math.floor(Math.random() * _object.length);
 
-    let preadikat: Gedicht[] = [
-        {
-            word1: "coden",
-            word2: "studieren",
-            word3: "treffen",
-            word4: "pöbeln",
-            word5: "trinken"
-        }
-    ];
+        let value: string = _subject[value1] + "" + _preadikat[value3] + "" + _object[value2];
 
-    let objekt: Gedicht[] = [
-        {
-            word1: "Müll",
-            word2: "Bier",
-            word3: "auf Probleme",
-            word4: "eine Katastrophe",
-            word5: "in der Öffentlichkeit"
-        }
-    ];
-
-    for (let index: number = 5; index >= subjekt.length; index--) {
-        console.log(index);
-        getVerse([], [], []);
-        console.log(getVerse([], [], []));
-    }
-
-    function getVerse(_subjekt: Gedicht[], _preadikat: Gedicht[], _objekt: Gedicht[]): string {
-        return "Aloa";
+        _subject.splice(value1, 1);
+        _object.splice(value2, 1);
+        _preadikat.splice(value3, 1);
+        return value;
     }
 
 }

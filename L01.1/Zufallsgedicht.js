@@ -1,40 +1,25 @@
 "use strict";
 var Zufallsgedicht;
 (function (Zufallsgedicht) {
-    let subjekt = [
-        {
-            word1: "Moritz",
-            word2: "Julian",
-            word3: "Mona",
-            word4: "Leon",
-            word5: "Martin"
-        }
-    ];
-    let preadikat = [
-        {
-            word1: "coden",
-            word2: "studieren",
-            word3: "treffen",
-            word4: "pöbeln",
-            word5: "trinken"
-        }
-    ];
-    let objekt = [
-        {
-            word1: "Müll",
-            word2: "Bier",
-            word3: "auf Probleme",
-            word4: "eine Katastrophe",
-            word5: "in der Öffentlichkeit"
-        }
-    ];
-    for (let index = 5; index >= subjekt.length; index--) {
-        console.log(index);
-        getVerse([], [], []);
-        console.log(getVerse([], [], []));
+    let subject = ["Moritz", "Julian", "Mona", "Martin", "Leon"];
+    let preadikat = ["trinkt", "pöbelt", "codet", "randaliert", "ärgert"];
+    let object = ["Alkohol", "in der Öffentlichkeit", "Leute an", "am Computer", "im Schlachthof"];
+    for (let index = 5; index >= 1; index--) {
+        //console.log(index);
+        //getVerse(subjekt, preadikat, objekt);
+        //console.log(getVerse);
+        let valueFinal = getVerse(subject, preadikat, object);
+        console.log(valueFinal);
     }
-    function getVerse(_subjekt, _preadikat, _objekt) {
-        return "Aloa";
+    function getVerse(_subject, _preadikat, _object) {
+        let value1 = Math.floor(Math.random() * _subject.length);
+        let value2 = Math.floor(Math.random() * _preadikat.length);
+        let value3 = Math.floor(Math.random() * _object.length);
+        let value = _subject[value1] + "" + _preadikat[value3] + "" + _object[value2];
+        _subject.splice(value1, 1);
+        _object.splice(value2, 1);
+        _preadikat.splice(value3, 1);
+        return value;
     }
 })(Zufallsgedicht || (Zufallsgedicht = {}));
 //# sourceMappingURL=Zufallsgedicht.js.map
