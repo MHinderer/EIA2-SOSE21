@@ -1,0 +1,24 @@
+.div0 {
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 50px;
+    width: 600px;
+    height: 500px;
+    background-color: darkblue;
+}
+
+.div1 {
+    position: absolute;
+    margin-left: 800px;
+    margin-top: 50px;
+    width: 600px;
+    height: 500px;
+    background-color: darkblue;
+}
+
+.span {
+    position: fixed;
+    width: 150px;
+    height: 100px;
+    background-color: darkgoldenrod;
+}
