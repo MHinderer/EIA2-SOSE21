@@ -1,0 +1,10 @@
+.gameField {
+    width:fit-content;
+    height: fit-content;
+    border-color: darkred;
+    border-radius: 10px;
+}
+
+.hidden{
+    display: none;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style03.css">
+    <script src="script03.js"></script>
+    <title>Memory</title>
+</head>
+
+<body>
+    <h1 id="memory">MEMORY</h1>
+    <form>
+        <div id="form">
+
+            <fieldset>
+                <legend>Pairs</legend>
+                <input type="number" name="Pairs " id="input" value="5" min="5" max="25">
+                <label for="input"></label>
+            </fieldset>
+
+            <fieldset>
+				<legend>Card Size</legend>
+				<span id="slider">
+					<span>
+						10 px
+						<input type="range" name="CardSize" id="size" min="10" max="100" step="10" value="50">
+						100 px
+					</span>
+					<span ></span>
+				</span>
+			</fieldset>
+
+            <fieldset>
+                <legend>backgroundColor</legend>
+                <input type="color" name="backgroundColor" id="backgroundColor" value="#ff0080">
+                <label for="backgroundColor"></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>fontColor</legend>
+                <input type="color" name="fontColor" id="fontColor" value="#ff0080">
+                <label for="fontColor"></label>
+            </fieldset>
+            
+
+            <fieldset>
+                <legend>Font</legend>
+				<select name="Font" id="font">
+					<option value="Arial">Arial</option>
+					<option value="sans-serif">Sans-Serif</option>
+					<option value="Helvetica">Helvetica</option>
+				</select>
+            </fieldset>
+            
+            <button type="button" id="start">START</button>
+        </div>
+    </form>
+</body>
+</html>
