@@ -1,10 +1,6 @@
 namespace L03_Memory {
     window.addEventListener("load", gameStart);
 
-    let gameField: HTMLDivElement = <HTMLDivElement>document.createElement("div");
-    gameField.classList.add("gameField");
-    gameField.setAttribute("style", "display:none");
-
     //formData Objekte
     let formData: FormData;
     let pairs: FormDataEntryValue | null;
@@ -14,23 +10,27 @@ namespace L03_Memory {
     let fontStyle: FormDataEntryValue | null;
 
     let numOfPairs: number;
+    let gameField: HTMLDivElement = <HTMLDivElement>document.createElement("div");
+    gameField.classList.add("gameField");
 
     function gameStart(): void {
         let start: HTMLElement = <HTMLElement>document.querySelector("#start");
         start.addEventListener("click", handleLoad);
+
     }
 
     function handleLoad(): void {
+        let body: HTMLBodyElement = <HTMLBodyElement>document.querySelector(".body");
         let form: HTMLDivElement = <HTMLDivElement>document.querySelector("#form");
-        console.log("START");
-        form.setAttribute("style", "display:unset");
+        form.setAttribute("style", "display:none");
+        body.appendChild(gameField);
         gameField.setAttribute("style", "display:unset");
 
         formData = new FormData(document.forms[0]);
         size = Number(formData.get("CardSize"));
         backgroundColor = formData.get("backgroundColor");
         fontColor = formData.get("fontColor");
-        fontStyle = formData.get("fontStyle");
+        fontStyle = formData.get("Font");
 
         pairs = formData.get("Pairs");
         if (pairs) {   //muss einen Wert haben
@@ -316,7 +316,6 @@ namespace L03_Memory {
             let card: HTMLDivElement = document.createElement("div");
 
             card.classList.add("card");
-            card.classList.add("hidden");
             card.style.backgroundColor = "green";
 
             //Karte bekommt die ausgewählte Größe vom Slider

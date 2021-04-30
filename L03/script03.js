@@ -2,9 +2,6 @@
 var L03_Memory;
 (function (L03_Memory) {
     window.addEventListener("load", gameStart);
-    let gameField = document.createElement("div");
-    gameField.classList.add("gameField");
-    gameField.setAttribute("style", "display:none");
     //formData Objekte
     let formData;
     let pairs;
@@ -13,20 +10,23 @@ var L03_Memory;
     let fontColor;
     let fontStyle;
     let numOfPairs;
+    let gameField = document.createElement("div");
+    gameField.classList.add("gameField");
     function gameStart() {
         let start = document.querySelector("#start");
         start.addEventListener("click", handleLoad);
     }
     function handleLoad() {
+        let body = document.querySelector(".body");
         let form = document.querySelector("#form");
-        console.log("START");
-        form.setAttribute("style", "display:unset");
+        form.setAttribute("style", "display:none");
+        body.appendChild(gameField);
         gameField.setAttribute("style", "display:unset");
         formData = new FormData(document.forms[0]);
         size = Number(formData.get("CardSize"));
         backgroundColor = formData.get("backgroundColor");
         fontColor = formData.get("fontColor");
-        fontStyle = formData.get("fontStyle");
+        fontStyle = formData.get("Font");
         pairs = formData.get("Pairs");
         if (pairs) { //muss einen Wert haben
             numOfPairs = Number(pairs);
@@ -300,7 +300,6 @@ var L03_Memory;
         for (let index = 0; index < numOfPairs; index++) {
             let card = document.createElement("div");
             card.classList.add("card");
-            card.classList.add("hidden");
             card.style.backgroundColor = "green";
             //Karte bekommt die ausgewählte Größe vom Slider
             card.style.height = size + "px";

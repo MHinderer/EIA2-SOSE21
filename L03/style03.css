@@ -1,10 +1,38 @@
 .gameField {
-    width:fit-content;
-    height: fit-content;
+    display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	justify-content: center; 
+	text-align: center;
     border-color: darkred;
     border-radius: 10px;
 }
 
 .hidden{
     display: none;
+}
+
+#form {
+        width: 700px;
+        height: 500px;
+        text-align: center;
+        justify-content: center;
+        margin-top: 150px;
+        margin-left: 375px;
+}
+
+#memory {
+    justify-content: center; 
+	text-align: center;
+}
+
+.card {
+    height: 100px;
+  	width: 100px;
+	margin: 0px 25px 25px 0px;
+	text-align: center;
+	font-size: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
