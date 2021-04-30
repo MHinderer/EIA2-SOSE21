@@ -2,7 +2,6 @@
 var L03_Memory;
 (function (L03_Memory) {
     window.addEventListener("load", gameStart);
-    let form = document.querySelector("#form");
     let gameField = document.createElement("div");
     gameField.classList.add("gameField");
     gameField.setAttribute("style", "display:none");
@@ -19,7 +18,9 @@ var L03_Memory;
         start.addEventListener("click", handleLoad);
     }
     function handleLoad() {
-        form.classList.add(".hidden");
+        let form = document.querySelector("#form");
+        console.log("START");
+        form.setAttribute("style", "display:unset");
         gameField.setAttribute("style", "display:unset");
         formData = new FormData(document.forms[0]);
         size = Number(formData.get("CardSize"));
