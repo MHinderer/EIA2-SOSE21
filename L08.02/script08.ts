@@ -45,13 +45,13 @@ namespace Flowerfield {
         crc2.clearRect(0, 0, 0, 0);
 
         crc2.save();
-        crc2.moveTo(50, 50);
-        crc2.translate(50, 50);
-        crc2.translate(50, 50);
+        crc2.moveTo(20, 20);
+        crc2.translate(20, 20);
+        crc2.translate(20, 20);
 
         crc2.rotate(rotate);
         crc2.beginPath();
-        crc2.arc(0, 0, 40, 0, 2 * Math.PI, false);
+        crc2.arc(0, 0, 20, 0, 2 * Math.PI, false);
         crc2.fillStyle = colorSun;
         crc2.fill();
 
