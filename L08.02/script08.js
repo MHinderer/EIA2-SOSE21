@@ -47,11 +47,11 @@ var Flowerfield;
             crc2.save();
             crc2.fillStyle = "#ffff99";
             crc2.rotate(rotate2);
-            crc2.translate(75, 0);
+            crc2.translate(25, 0);
             if (i % 2 == 0)
-                crc2.fillRect(0, 0, 150, 2);
+                crc2.fillRect(0, 0, 50, 2);
             else
-                crc2.fillRect(0, 0, 75, 2);
+                crc2.fillRect(0, 0, 30, 2);
             crc2.restore();
             rotate2 += (2 * Math.PI) / 8;
         }
