@@ -64,8 +64,8 @@ var Flowerfield;
     // Inspiriert bei Jirka
     function drawMountains(_height, _color) {
         let min = 80;
-        let max = 400;
-        let stepMin = 120;
+        let max = 200;
+        let stepMin = 100;
         let stepMax = 150;
         let x = 0;
         crc2.save();

@@ -84,9 +84,9 @@ namespace Flowerfield {
     function drawMountains(_height: number, _color: string): void {
 
         let min: number = 80;
-        let max: number = 400;
+        let max: number = 200;
 
-        let stepMin: number = 120;
+        let stepMin: number = 100;
         let stepMax: number = 150;
         let x: number = 0;
 
